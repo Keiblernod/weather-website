@@ -79,7 +79,7 @@ const weather = (address, callback) => {
         if(error){
            return callback({error});
         } 
-        forcast(latitude,longitude,(error,{description,temperature,feelslike}) => {
+        forcast(latitude,longitude,(error,{description,temperature,feelslike,icon}) => {
             if(error){
                 return callback({error});
             }
@@ -89,7 +89,8 @@ const weather = (address, callback) => {
                 description,
                 temperature,
                 feelslike,
-                address
+                address,
+                icon
             });
             
             });
